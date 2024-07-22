@@ -1,0 +1,315 @@
+/* Basic reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+/* Slideshow Styling */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure slideshow is behind the hero content */
+    white-space: nowrap; /* Prevent images from wrapping */
+}
+
+.hero-slider .slide-images {
+    display: flex; /* Align images horizontally */
+    width: 100%; /* Width to accommodate three images */
+    height: 100%;
+    animation: slideAnimation 15s infinite;
+}
+
+.hero-slider .img-container {
+    flex: 0 0 100%; /* Each image container takes up 100% of the slider width */
+    height: 100%; /* Full height of the hero section */
+    overflow: hidden; /* Hide any overflow from the images */
+}
+
+.hero-slider .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Keyframes for slideshow animation */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    30% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    50% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    70% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    90% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: absolute; /* Absolute position to center in hero */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering with transform */
+    z-index: 1; /* Ensure this is above the slider */
+    color: #fff;
+    padding: 1rem; /* Add some padding for better readability */
+    text-align: center; /* Center text horizontally */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 1rem;
+    background: #f4f4f4;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+    width: 350px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.portfolio-item h3 {
+    margin: 1rem 0;
+}
+
+.portfolio-item p {
+    color: #666;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+    padding: 4rem 1rem;
+    background: #fff; /* White background for contrast */
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Resume Section */
+.resume {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: #f4f4f4; /* Added a background color for better contrast */
+}
+
+.resume h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem; /* Increase font size for better visibility */
+}
+
+.resume p {
+    margin-bottom: 2rem; /* Space between text and button */
+    font-size: 1.2rem;
+}
+
+.resume-link {
+    font-size: 1.2rem;
+    color: #f39c12;
+    text-decoration: none;
+    border: 1px solid #f39c12;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    display: inline-block; /* Ensure the button does not stretch to full width */
+    transition: background 0.3s, color 0.3s;
+}
+
+.resume-link:hover {
+    background: #f39c12;
+    color: #fff;
+}
+
+/* Demo Section */
+.demo {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.demo video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 0.5rem;
+}
+
+/* Contact Form */
+.contact {
+    padding: 4rem 1rem;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.contact button {
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #e67e22;
+}
+
+/* Social Media Links */
+.socials {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.socials h3 {
+    margin-bottom: 1rem;
+}
+
+.socials a {
+    font-size: 1.2rem;
+    color: #f39c12;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #e67e22;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
