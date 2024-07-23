@@ -2,58 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="Wallpapers/portfolio.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Adeel Khan - Game Programmer</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Muhammad Adeel Khan</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a> 
+        
+        <nav class="navbar">
+            <a href="#home" style="--i:1;">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#portfolio" style="--i:3;">Portfolio</a>
+            <a href="#contact" style="--i:4;">Contact</a>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-slider">
-                <div class="slide-images">
-                <div class="img-container">
-                    <img src="Wallpapers/Image1.jpg">
-                </div>
-                <div class="img-container">
-                    <img src="Wallpapers/Image2.jpg">
-                </div>
-                <div class="img-container">
-                    <img src="Wallpapers/Image3.jpg">
-                </div>
-                    <div class="img-container">
-                    <img src="Wallpapers/Image4.jpg">
-                </div>
-                    <div class="img-container">
-                    <img src="Wallpapers/Image5.jpg">
-                </div>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Muhammad Adeel Khan</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/muhammad-adeel-khan-9a8537180" style="--i:5;"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Balongi393" style="--i:6;"><i class='bx bxl-github' ></i></a>
+                <a href="https://steamcommunity.com/id/real_balongi" style="--i:7;"><i class='bx bxl-steam' ></i></a>
             </div>
+            <a href="https://drive.google.com/file/d/1AgVdh2-ucgeeqpMTrXZHDZOao8_n1VYI/view?usp=sharing" class="resume" target="_blank">Download Resume</a>
         </div>
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Game Programmer</p>
+        
+        <div class="home-img">
+            <img src="Wallpapers/Picture.jpg" alt="">
         </div>
     </section>
 
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
-
         <p>I kicked off my career at Virtual Dive Studios, where I dived deep into exciting projects and honed my skills. From there, I moved on to The Gamestorm Studios, where I continued to grow and explore new challenges. Today, I’m proudly working at Bric Game Studios, focusing on crafting engaging multiplayer experiences.</p>
-
         <p>When I’m not in the studio, I’m always on the lookout for fresh ideas and innovative solutions. Feel free to browse my portfolio to see what I’ve been up to. Got a question, a cool opportunity, or just want to chat? Reach out—I’d love to connect!</p>
     </section>
+
 
     <section id="portfolio" class="portfolio">
         <h2>My Work</h2>
@@ -124,12 +117,6 @@
         </div>
     </section>
 
-    <section id="resume" class="resume">
-        <h2>Resume</h2>
-        <p>Download my resume from the link below:</p>
-        <a href="https://drive.google.com/file/d/1AgVdh2-ucgeeqpMTrXZHDZOao8_n1VYI/view?usp=sharing" class="resume-link" target="_blank">Download Resume</a>
-    </section>
-
     <section id="demo" class="demo">
         <h2>Finished Game Demo</h2>
         <video controls>
@@ -140,6 +127,7 @@
 
     <section id="contact" class="contact">
     <h2>Contact</h2>
+        
     <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -152,20 +140,14 @@
         
         <button type="submit">Send</button>
     </form>
-    <div class="socials">
-        <h2>Let’s Connect</h2>
-        <a href="https://github.com/Balongi393" target="_blank" class="social-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/muhammad-adeel-khan-9a8537180" target="_blank" class="social-link">LinkedIn</a>
-        <a href="https://steamcommunity.com/id/real_balongi" target="_blank" class="social-link">Steam</a>
-        <!-- Add more social links as needed -->
-    </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Muhammad Adeel Khan. All rights reserved.</p>
     </footer>
     
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>

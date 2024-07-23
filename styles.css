@@ -1,147 +1,249 @@
-/* Basic reset and box-sizing */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    background: #1F242D;
+    color: #fff;
 }
 
-/* Header */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+.header {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
-}
-
-nav {
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    background: rgba(31, 36, 45, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    z-index: 100;
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 1rem;
-}
-
-nav ul li a {
+.logo {
+    font-size: 25px;
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards; 
 }
 
-nav ul li a:hover {
-    color: #f39c12;
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
+.navbar a:hover,
+.navbar a.active {
+    color: greenyellow;
+    text-shadow: 0 0 20px greenyellow;
+}
+
+.home {
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 710px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideButtom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: greenyellow;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-img img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid greenyellow;
+    background: greenyellow;
+    box-shadow: 0 0 20px greenyellow;
+    margin-right: 20px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid greenyellow;
+    border-radius: 50%;
+    font-size: 20px;
+    color: greenyellow;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+    background: greenyellow;
+    color: #1F242D;
+    box-shadow: 0 0 20px greenyellow;
+}
+
+/* Keyframes Animations */
+@keyframes slideRight {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideTop {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translatey(0); opacity: 1; }
+}
+
+@keyframes slideButtom {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translatey(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translatey(-24px); }
+    100% { transform: translatey(0); }
+}
+
+
+/* Resume Section */
+.resume {
+    display: inline-block;
+    padding: 12px 28px;
+    background: greenyellow;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1F242D;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.home-content a:hover {
+    box-shadow: 0 0 10px greenyellow;
+}
+
+/* About Section */
+.about {
+    background: #1F242D;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.about h2 {
+    margin-top: 180px; /* Adds gap */
+    font-size: 40px;
+    font-weight: 700;
+    align-items: center;
     text-align: center;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    margin-bottom: 20px; /* Adds gap between the heading and paragraphs */
 }
 
-/* Slideshow Styling */
-.hero-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Ensure slideshow is behind the hero content */
-    white-space: nowrap; /* Prevent images from wrapping */
+.about p {
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    max-width: 100%; /* Optional: limits the width of the paragraphs for better readability */
 }
-
-.hero-slider .slide-images {
-    display: flex; /* Align images horizontally */
-    width: 100%; /* Width to accommodate three images */
-    height: 100%;
-    animation: slideAnimation 15s infinite;
-}
-
-.hero-slider .img-container {
-    flex: 0 0 100%; /* Each image container takes up 100% of the slider width */
-    height: 100%; /* Full height of the hero section */
-    overflow: hidden; /* Hide any overflow from the images */
-}
-
-.hero-slider .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
-}
-
-/* Keyframes for slideshow animation */
-@keyframes slideAnimation {
-    0% { transform: translateX(0); }
-    10% { transform: translateX(0); }
-    20% { transform: translateX(-100%); }
-    30% { transform: translateX(-100%); }
-    40% { transform: translateX(-200%); }
-    50% { transform: translateX(-200%); }
-    60% { transform: translateX(-300%); }
-    70% { transform: translateX(-300%); }
-    80% { transform: translateX(-400%); }
-    90% { transform: translateX(-400%); }
-    100% { transform: translateX(0); }
-}
-
-/* Hero Content Styling */
-.hero-content {
-    position: absolute; /* Absolute position to center in hero */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centering with transform */
-    z-index: 1; /* Ensure this is above the slider */
-    color: #fff;
-    padding: 1rem; /* Add some padding for better readability */
-    text-align: center; /* Center text horizontally */
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-}
-
 
 /* Portfolio Section */
 .portfolio {
     padding: 4rem 1rem;
-    background: #f4f4f4;
+    background: #1F242D;
 }
 
 .portfolio h2 {
+    margin-top: 180px; /* Adds gap */
+    font-size: 40px;
+    font-weight: 700;
+    align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    margin-bottom: 20px; /* Adds gap between the heading and paragraphs */
 }
 
 .portfolio-items {
@@ -152,7 +254,7 @@ nav ul li a:hover {
 }
 
 .portfolio-item {
-    background: #fff;
+    background: #1F242D;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -171,69 +273,30 @@ nav ul li a:hover {
 }
 
 .portfolio-item p {
-    color: #666;
+    color: #fff;
 }
 
 .portfolio-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* About Section */
-.about {
-    padding: 4rem 1rem;
-    background: #fff; /* White background for contrast */
-    text-align: center;
-}
-
-.about h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-
-.about p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-/* Resume Section */
-.resume {
-    padding: 4rem 1rem;
-    text-align: center;
-    background: #f4f4f4; /* Added a background color for better contrast */
-}
-
-.resume h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem; /* Increase font size for better visibility */
-}
-
-.resume p {
-    margin-bottom: 2rem; /* Space between text and button */
-    font-size: 1.2rem;
-}
-
-.resume-link {
-    font-size: 1.2rem;
-    color: #f39c12;
-    text-decoration: none;
-    border: 1px solid #f39c12;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    display: inline-block; /* Ensure the button does not stretch to full width */
-    transition: background 0.3s, color 0.3s;
-}
-
-.resume-link:hover {
-    background: #f39c12;
-    color: #fff;
+    box-shadow: 0 0 10px greenyellow;
 }
 
 /* Demo Section */
 .demo {
     padding: 4rem 1rem;
     text-align: center;
+}
+
+.demo h2 {
+    margin-top: 180px; /* Adds gap */
+    font-size: 40px;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    margin-bottom: 20px; /* Adds gap between the heading and paragraphs */
 }
 
 .demo video {
@@ -248,8 +311,15 @@ nav ul li a:hover {
 }
 
 .contact h2 {
+    margin-top: 180px; /* Adds gap */
+    font-size: 40px;
+    font-weight: 700;
+    align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    margin-bottom: 20px; /* Adds gap between the heading and paragraphs */
 }
 
 .contact form {
@@ -271,39 +341,19 @@ nav ul li a:hover {
 }
 
 .contact button {
-    background: #f39c12;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background 0.3s;
+    display: inline-block;
+    padding: 12px 28px;
+    background: greenyellow;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1F242D;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .contact button:hover {
-    background: #e67e22;
-}
-
-/* Social Media Links */
-.socials {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.socials h3 {
-    margin-bottom: 1rem;
-}
-
-.socials a {
-    font-size: 1.2rem;
-    color: #f39c12;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
-}
-
-.socials a:hover {
-    color: #e67e22;
+    box-shadow: 0 0 10px greenyellow;
 }
 
 /* Footer */
