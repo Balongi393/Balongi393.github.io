@@ -9,18 +9,24 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
+    
+<!-- nav bar section -->
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a> 
+        <a href="#" class="logo">M.Adeel Khan</a> 
+        
+        <i class='bx bx-menu' id="menu-icon"></i>
         
         <nav class="navbar">
-            <a href="#home" style="--i:1;">Home</a>
+            <a href="#home" class="active" style="--i:1;">Home</a>
             <a href="#about" style="--i:2;">About</a>
+            <a href="#services" style="--i:2;">Services</a>
             <a href="#portfolio" style="--i:3;">Portfolio</a>
             <a href="#contact" style="--i:4;">Contact</a>
         </nav>
     </header>
 
+    <!-- home section -->
     <section id="home" class="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
@@ -32,7 +38,7 @@
                 <a href="https://github.com/Balongi393" style="--i:6;"><i class='bx bxl-github' ></i></a>
                 <a href="https://steamcommunity.com/id/real_balongi" style="--i:7;"><i class='bx bxl-steam' ></i></a>
             </div>
-            <a href="https://drive.google.com/file/d/1AgVdh2-ucgeeqpMTrXZHDZOao8_n1VYI/view?usp=sharing" class="resume" target="_blank">Download Resume</a>
+            <a href="https://drive.google.com/file/d/1AgVdh2-ucgeeqpMTrXZHDZOao8_n1VYI/view?usp=sharing" class="btn" target="_blank">Download Resume</a>
         </div>
         
         <div class="home-img">
@@ -40,13 +46,49 @@
         </div>
     </section>
 
+    
+    <!-- about section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
-        <p>I kicked off my career at Virtual Dive Studios, where I dived deep into exciting projects and honed my skills. From there, I moved on to The Gamestorm Studios, where I continued to grow and explore new challenges. Today, I’m proudly working at Bric Game Studios, focusing on crafting engaging multiplayer experiences.</p>
-        <p>When I’m not in the studio, I’m always on the lookout for fresh ideas and innovative solutions. Feel free to browse my portfolio to see what I’ve been up to. Got a question, a cool opportunity, or just want to chat? Reach out—I’d love to connect!</p>
+        <div class="about-img">
+            <img src="Wallpapers/Picture.jpg" alt="">
+        </div>
+        
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Game Developer</h3>
+            <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
+        <a href="#" class="btn" target="_blank">Read More</a>    
+        </div>
     </section>
 
+    
+    <!-- Services section -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-game' ></i>
+                <h3>Game Development</h3>
+                <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
+                <a href="#" class="btn" target="_blank">Read More</a>
+            </div>
+            
+            <div class="services-box">
+                <i class='bx bx-code-alt' ></i>
+                <h3>Web Development</h3>
+                <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            
+              <div class="services-box">
+                <i class='bx bx-video' ></i>
+                <h3>Video Editing</h3>
+                <p>Welcome to my corner of the digital universe! I’m Muhammad Adeel Khan, and I’ve been on a thrilling journey through the world of game development. My adventure began in December 2021, and since then, I’ve had the pleasure of working on a variety of exciting games across different studios.</p>
+                <a href="#" class="btn" target="_blank">Read More</a>
+            </div>
+        </div>
+    </section>
 
     <section id="portfolio" class="portfolio">
         <h2>My Work</h2>
