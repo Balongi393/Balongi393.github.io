@@ -204,9 +204,6 @@ span {
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
-    opacity: 0;
-    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-    animation-delay: 2s, 3s;
 }
 
 .about-content h3 {
