@@ -264,8 +264,8 @@ span {
 }
 
 .portfolio-container {
-   display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -309,11 +309,11 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .portfolio-layer p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: .3rem 0 1rem;
 }
 
