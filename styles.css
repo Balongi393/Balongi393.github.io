@@ -107,8 +107,11 @@ span {
 }
 
 .home-img img {
-    height: 310px;
-    width: 310px;
+    width: 100%;
+    max-width: 310px;
+    min-width: 180px; /* Prevents shrinking too much */
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 10px solid greenyellow;
     background: greenyellow;
@@ -174,12 +177,16 @@ span {
 }
 
 .about-img img {
-    height: 310px;
-    width: 310px;
+    width: 100%;
+    max-width: 310px;
+    min-width: 180px; /* Prevents shrinking too much */
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 10px solid greenyellow;
     background: greenyellow;
     box-shadow: 0 0 20px greenyellow;
+    margin-right: 20px;
     animation: floatImage 4s ease-in-out infinite;
 }
 
