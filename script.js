@@ -55,3 +55,26 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+function toggleReadMore(button) {
+    const layer = button.parentElement;
+    const shortText = layer.querySelector('.short-text');
+    const fullText = layer.querySelector('.full-text');
+
+    const isExpanded = fullText.classList.contains('show');
+
+    if (isExpanded) {
+        fullText.classList.remove('show');
+        shortText.classList.add('show');
+        button.textContent = "Read More";
+    } else {
+        fullText.classList.add('show');
+        shortText.classList.remove('show');
+        button.textContent = "Read Less";
+    }
+}
+
+// Show short text by default on page load
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.short-text').forEach(el => el.classList.add('show'));
+});
